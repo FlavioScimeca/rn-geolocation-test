@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "hello-world",
+    "slug": "hello-world",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "infoPlist": {
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "$(PRODUCT_NAME) requires to use you location in the background",
+        "NSLocationWhenInUseUsageDescription": "$(PRODUCT_NAME) requires location while in use",
+        "NSMotionUsageDescription": "$(PRODUCT_NAME) uses motion-detection to determine the motion-activity of the device (walking, vehicle, bicycle, etc)",
+        "UIBackgroundModes": [
+          "fetch",
+          "location",
+          "processing",
+          "remote-notification",
+          "audio"
+        ],
+        "BGTaskSchedulerPermittedIdentifiers": [
+          "com.transistorsoft.fetch",
+          "com.transistorsoft.customtask"
+        ]
+      },
+      "supportsTablet": true,
+      "bundleIdentifier": "com.app.Loadaman"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.app.hello_world"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "react-native-background-geolocation",
+        {
+          "license": "YOUR_LICENSE_KEY_HERE"
+        }
+      ],
+      [
+        "expo-gradle-ext-vars",
+        {
+          "googlePlayServicesLocationVersion": "21.1.0",
+          "appCompatVersion": "1.4.2"
+        }
+      ],
+      "react-native-background-fetch"
+    ]
+  }
+}
